@@ -255,51 +255,59 @@ header .wrapper::before {
 .section-resume h2 {
   font-size:2.2rem;
   text-transform:uppercase;
-  padding:40px 40% 20px 2%;
+  padding:40px 0 20px 2%;
+  margin: 0 0 0 50%;
 }
 
 .resume-title {
   letter-spacing:2px;
-  float:right;
-  text-align: right;
-  padding:20px 40% 10px 2%;
+  text-align: left;
+  padding:20px 0 10px 10px;
   border-bottom:1px solid  #CA0600;
   border-left:1px solid #CA0600;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  margin: 20px 0 25px 12%;
+  font-weight: bold;
 }
 
 .resume-content {
-  border: 1px solid pink;
   display: inline-block;
   width: 95%;
   margin: 10px auto;
+  padding:0 ;
   height: auto;
 }
-.resume-section {
+.resume-unit {
   width: 50%;
-  border: 1px solid blue;
+  display: inline-block;
+  height: auto;
 }
 .resume-item-top {
   display: inline-block;
-  border: 2px solid blue;
-  margin: 10px 0 0;
-  padding: 0;
-  width: 90%;
-  height: 60px;
+  border: 1px solid #004F89;
+  margin: 0 10px 0 0;
+  float: right;
+  width: 75%;
+  height: 63px;
   border-radius: 10px;
   background-color: white;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer; cursor: hand;
 }
+
 .resume-item-time{
-  border-right: 2px solid purple;
+  border-right: 1px solid #CA0600;
   width: 30%;
   text-align: left;
   height: 100%;
-  display: inline-block;
+  display: flex;
   float:left;
 }
 .resume-item-time p{
   font-size: 0.9rem;
-  padding: 10% 7px;
+  padding: 0 7px;
+  margin: auto 0;
+  position: relative;
 }
 .resume-item-info{
   height: 100%;
@@ -310,10 +318,27 @@ header .wrapper::before {
 }
 .resume-info-role {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
+.resume-info-entity{
+  font-weight: bold;
+  margin-right: 25px;
+  margin-left: 2px;
+  line-height: 27px;
+}
+
 .resume-item-details{
   clear:both;
+  background-color: white;
+  height: 0px;
+  text-align: justify;
+  float: right;
+  margin-right: 20px;
+  width: 80%;
+  color: black;
+  font-size: 0.9rem;
+  line-height: 20px; 
+  overflow: hidden;
 }
 
 

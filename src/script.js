@@ -22,11 +22,15 @@ var main = function() {
     }
 });
 
-  $(".services-button").click(function(){
 
-      var textToToggle = $(this).parent().find(".service-info-toggled");
+ 
+  $(".resume-item-top").click(function(){
+
+      var textToToggle = $(this).parent().find(".resume-item-details");
 
       if (textToToggle.height() == 0){
+        textToToggle.css('padding', '10px');
+        textToToggle.css('border', '1px solid #004F89');
         textToToggle.animate(
           {
             height: textToToggle.get(0).scrollHeight}, 1000, function(){
@@ -37,17 +41,24 @@ var main = function() {
          textToToggle.animate(
           {
             height: 0}, 1000, function(){
-              $(this).height(0); 
+              $(this).height(0)
           }
         )
+         window.setTimeout((()=> textToToggle.css('padding', '0px').css('border', 'none')), 400 );
+        
+
        }
 
-     if ($(this).find('.btn-text').html() == "Click for details"){
+/*     if ($(this).find('.btn-text').html() == "Click for details"){
         $(this).find('.btn-text').html('Click to hide details');
      } else {
           $(this).find('.btn-text').html('Click for details');
-      }
-    })
+      } */
+
+
+    }) 
+
+
 
 }
 
