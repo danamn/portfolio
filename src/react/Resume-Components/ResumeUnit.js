@@ -9,12 +9,18 @@ export default class ResumeUnit extends React.Component {
 	}
 
 	render(){
+
+		var unit = this.props.unit;
+
 		return(
 			<div className= 'resume-unit'>
-				<Title title = {this.props.title} />
-				<Item />
-				<Item />
-				<Item />
+				<Title title = {unit.unitTitle} />
+				{unit.item.map( (item) => {
+					return <Item key = {item.key} item = {item} />
+				})
+
+				}
+
 			</div>
 
 		)

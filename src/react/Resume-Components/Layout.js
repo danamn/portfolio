@@ -4,40 +4,44 @@ import ResumeUnit from './ResumeUnit';
 
 
 var myResume = [{
-	key: 0,
+	key: 1,
 	unitTitle: "Professional Experience",
 	item: [{
+			key: 10,
 			time: "May -July 2016",
 			role: "IT Talent Acquisition Specialist",
 			entity: "Nexonia Inc.",
 			location: "Montreal, QC",
-			description: "Bla bla"
+			details: "I was responsible for the recruitment of technical roles for a fast-growing software development company. I recruited software developers (Java), QA analysts - mobile and integration, system administrator. "
 		},
-		{
+		{	key: 11,
 			time: "May 2014 - March 2016",
 			role: "IT Recruiter",
 			entity: "Itergy Inc.",
 			location: "Montreal, QC",
-			description: "Bla bla "
+			details: "As sole recruiter of a Microsoft infrastructure solutions consulting firm, I was the main responsible for the entire full-cycle recruitment for technical roles of all levels: infrastructure consultants, system administrators, project managers, technicians."
 		},
 		{
+			key: 12,
 			time: "August 2013 - April 2014",
 			role: "IT Recruiter",
-			entity: "Itergy Inc.",
+			entity: "eVision Inc.",
 			location: "Montreal, QC",
-			description: "Bla bla"
+			details: "In an expanding staffing and consulting agency, I have rapidly become successful in recruiting for the public sector, for IT roles with very strict requirements: SAP consultants, System Administrators, Testers, Architects."
 		}]
 	},
 	{
-	key: 1,
+	key: 2,
 	unitTitle: "Education",
 	item: [{
+			key: 20,
 			time: "2004-2009",
 			role: "Bachelor + Master in Psychology",
 			entity: "University of Trier",
 			location: "Trier, Germany"
 			},
 			{
+			key: 21,
 			time: "2000-2004",
 			role: "Bachelor in Business Administration",
 			entity: "Academy of Economic Studies",
@@ -45,29 +49,42 @@ var myResume = [{
 		}]
 	},
 	{
-	key: 2,
+	key: 3,
 	unitTitle: "Programming Training",
 	item: [{
+			key: 30,
 			time: "2016",
 			role: "Introduction to Computer Science",
 			entity: "MIT edX",
 			location: "Online [link]"
 			},
 			{
+			key: 31,
 			time: "2016",
-			role: "Fundamentals of CSS",
+			role: "CSS : Core Concepts",
 			entity: "Lynda.com",
 			location: "Online [link]"
-		}]
+		},{
+			key: 32,
+			time: "2016",
+			role: "Front-End Development Program",
+			entity: "Free Code Camp",
+			location: "Online [link]"
+		}
+		]
 	},
 	{
-	key: 3,
+	key: 4,
 	unitTitle: "IT Skills",
 	item: [{
-			role: "HTML 5, CSS, JavaScript, jQuery, ReactJS"
+			key:40,
+			time: 'Front-End',
+			role: "HTML, CSS, JavaScript, jQuery, ReactJS"
 		},
-		{
-			role: "Python (basic), SQL (basic)"
+		{	
+			key:41,
+			time: 'Back-End',
+			role: "Basic level of NodeJS, Python, SQL"
 		}]
 	}]
 
@@ -84,13 +101,15 @@ export default class Layout extends React.Component {
 		      <h2 className="resume-title">
 		        My Resume
 		      </h2>
+
 		      <div className='resume-content'>
-		      	<ResumeUnit title="Professional Experience" /> 
-		      	<ResumeUnit title="Education" /> 
-		      	<ResumeUnit title="Programming training" /> 
-		      	<ResumeUnit title="IT Skills" /> 
+		      	{myResume.map( (unit) => {
+		      		return <ResumeUnit unit = {unit} key = {unit.key} />
+		      		})
+		      	} 
 
 		      </div>
+
 	    	</div>
 	    	)
 	}
