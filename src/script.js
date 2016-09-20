@@ -44,9 +44,48 @@ var main = function() {
           }
         )
       }
-
-
     }) 
+
+
+  $('.slider-forward').click(function(){
+      var currentSlide = $('.current');
+      var nextSlide = currentSlide.next();
+
+      var currentDot = $('.active-dot');
+      var nextDot = currentDot.next();
+
+      if(nextSlide.length === 0) {
+      nextSlide = $('.slide').first();
+      nextDot = $('.dot').first();
+      }
+
+      currentSlide.fadeOut(600).removeClass('current');
+      nextSlide.fadeIn(600).addClass('current');
+
+      currentDot.removeClass('active-dot');
+      nextDot.addClass('active-dot')
+
+      });
+    
+  $('.slider-backward').click(function(){
+        var currentSlide = $('.current');
+        var previousSlide = currentSlide.prev();
+
+        var currentDot = $('.active-dot');
+        var prevDot = currentDot.prev();
+
+        if(previousSlide.length === 0) {
+        previousSlide = $('.slide').last();
+        prevDot = $('.dot').last();
+        }
+
+        currentSlide.fadeOut(600).removeClass('current');
+        previousSlide.fadeIn(600).addClass('current');
+
+        currentDot.removeClass('active-dot');
+        prevDot.addClass('active-dot');
+        });
+
 
 
 

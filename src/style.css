@@ -59,6 +59,7 @@ header .logo {
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer; cursor: hand;
 }
 nav ul {
   list-style:none;
@@ -192,12 +193,19 @@ header .wrapper::before {
   color: white; /*#033B80; */
   height:100vh;
   display: inline-block;
-  background-color: #004F89; /*#0067B2 */
+  background-color: #70B9EC ; /*#0067B2 #004F89*/
 }
 .section-about h2 {
-  margin-top: 30px;
-  padding: 20px 0  50px 0;
-  font-size:2.2rem;
+  font-size:1.8rem;
+  text-transform:uppercase;
+  padding:40px 0 10px 2%;
+  margin: 0 0 0 50%;
+  letter-spacing:2px;
+  text-align: left;
+  border-bottom:1px solid white;
+  border-left:1px solid white;
+  font-weight: bold;
+  text-align: left;
 }
 .about-text {
   text-align: justify;
@@ -273,8 +281,8 @@ header .wrapper::before {
 
 .resume-content {
   display: inline-block;
-  width: 95%;
-  margin: 10px auto;
+  width: 80%;
+  margin: 10px auto 30px;
   padding:0 ;
   height: auto;
 }
@@ -369,7 +377,7 @@ header .wrapper::before {
 .section-projects h2 {
   font-size:1.8rem;
   text-transform:uppercase;
-  padding:20px 0 10px 2%;
+  padding:40px 0 10px 2%;
   margin: 0 0 0 50%;
   letter-spacing:2px;
   text-align: left;
@@ -377,66 +385,69 @@ header .wrapper::before {
   border-left:1px solid white;
   font-weight: bold;
   text-align: left;
-  align-content: flex-end;
 }
-.section-projects a{
-  margin: 0;
-  padding: 0;
-  cursor: pointer; cursor: hand;
-}
-
-.brick-wall {
-  height: auto;
-  display: flex;
-  border: 1px solid pink;
-  margin: 150px 0 0 0;
-  width:100%;
-  flex-wrap: wrap-reverse;
-  align-items: flex-end;
-}
-.brick{
-  background: #272797;
-  background: -moz-linear-gradient(-45deg, #f85032 0%, #831b0c 0%, #f02f17 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #f85032), color-stop(0%, #831b0c), color-stop(100%, #f02f17));
-  background: -webkit-linear-gradient(-45deg, #f85032 0%, #831b0c 0%, #f02f17 100%);
-  background: -o-linear-gradient(-45deg, #f85032 0%, #831b0c 0%, #f02f17 100%);
-  background: -ms-linear-gradient(-45deg, #f85032 0%, #831b0c 0%, #f02f17 100%);
-  background: linear-gradient(135deg, #f85032 0%, #831b0c 0%, #f02f17 100%);
-
-  border: 4px solid beige;
-  height: 120px;
- box-shadow: 4px 3px 5px 5px rgba(0, 0, 0, 0.4);
+.slider-container{
   display: inline-block;
-  margin: 0;
+}
+.slider{
+  overflow: hidden;
+  height: 320px;
+  width: 300px;
+  margin: 20px auto;
+  position: relative;
+  display: inline-block;
+}
+.slide{
+  display: none;
   width: 100%;
-}
-.brick-full{
-  width: 25%;
-}
-.brick-half{
-  width: 12.5%;
-}
-.brick img{
-  float: left;
-  margin: 25px 0 auto 25px;
-  border-radius: 3px;
-  border: 1px solid beige;
-}
-.brick div{
-  float: left;
+  height: 100%;
+  border: 1px solid black;
   text-align: center;
-  color: white;
-  width: 50%;
-  margin: 40px 20px 40px 10px;
-  font-size: 1.1rem;
+  position: absolute;
+  top:0;
+  left: 0;
+
 }
 
+.current {
+  display: block;
 
+}
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
 
+.slider-dots li {
+  color: #fff;
+  display: inline;
+  font-size: 40px;
+  margin-right: 5px;
+}
 
-
-
-
+.slider-dots li.active-dot {
+  color: #004F89;
+}
+.left-arrow{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float:left;
+  margin-top: 40%;
+  margin-right: 30px;
+  cursor: pointer; cursor:hand;
+}
+.right-arrow{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  float:right;
+  margin-top: 40%;
+  margin-left: 30px;
+  cursor: pointer; cursor:hand;
+}
 
 
 
