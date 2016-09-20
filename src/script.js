@@ -46,8 +46,9 @@ var main = function() {
       }
     }) 
 
+var slideForward = function(){
 
-  $('.slider-forward').click(function(){
+      console.log('slideForward');
       var currentSlide = $('.current');
       var nextSlide = currentSlide.next();
 
@@ -63,11 +64,10 @@ var main = function() {
       nextSlide.fadeIn(600).addClass('current');
 
       currentDot.removeClass('active-dot');
-      nextDot.addClass('active-dot')
+      nextDot.addClass('active-dot');
+};
 
-      });
-    
-  $('.slider-backward').click(function(){
+var slideBackwards = function(){
         var currentSlide = $('.current');
         var previousSlide = currentSlide.prev();
 
@@ -84,11 +84,29 @@ var main = function() {
 
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
-        });
+        }
 
+  $('.slider-forward').click(slideForward);   
+  $('.slider-backward').click(slideBackwards);
 
-
-
+window.addEventListener("keydown", (function(slideAgain){
+    return function(event) {
+      if(!slideAgain) {return false;}
+      slideAgain = false;
+      setTimeout(function(){slideAgain = true;}, 700);
+      if(event.which === 39) {
+         slideForward();
+      } else if (event.which === 37) {
+          slideBackwards();
+      }
+    }
+  })(true), false);
+  
+  // display email address
+  var me = 'dana.nica.dev ';
+  var provider = ' gmail.com';
+  $('.email').find('p').html(me + '@' + provider);
+ 
 }
 
 $(document).ready(main)

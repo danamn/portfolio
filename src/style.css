@@ -190,7 +190,7 @@ header .wrapper::before {
 /* ----------- section about --------------------------- */ 
 
 .section-about {
-  color: white; /*#033B80; */
+  color: #004F89; /*#033B80; */
   height:100vh;
   display: inline-block;
   background-color: #70B9EC ; /*#0067B2 #004F89*/
@@ -202,8 +202,8 @@ header .wrapper::before {
   margin: 0 0 0 50%;
   letter-spacing:2px;
   text-align: left;
-  border-bottom:1px solid white;
-  border-left:1px solid white;
+  border-bottom:1px solid #004F89;
+  border-left:1px solid #004F89;
   font-weight: bold;
   text-align: left;
 }
@@ -257,7 +257,7 @@ header .wrapper::before {
   width: 100%; 
   height: 100%;  
   background-image:url('images/sand.jpg'); /*http://www.publicdomainpictures.net/pictures/90000/velka/silver-gradient.jpg*/
-  opacity:.6;
+  opacity:.5;
   z-index: -1;
   background-color: pink;
 }
@@ -389,13 +389,13 @@ header .wrapper::before {
 .slider-container{
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 65%;
-  margin: 0 auto;
+  margin: 100px auto 10px;
 }
 .slider{
   height: 250px;
   width: 650px;
-  margin: 70px auto;
   position: relative;
   display: inline-block;
 }
@@ -415,7 +415,8 @@ header .wrapper::before {
 .slide-img{
   border-radius: 7px;
   border: 1px solid #004F89;
-  margin: 30px 5px;
+  margin: 10px 5px;
+  width: 47%;
 }
 
 .slider-dots {
@@ -423,6 +424,7 @@ header .wrapper::before {
   display: inline-block;
   padding-left: 0;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .slider-dots li {
@@ -438,8 +440,6 @@ header .wrapper::before {
 .left-arrow{
   width: 50px;
   height: 50px;
-  display: inline-block;
-  margin-right: 25px;
   cursor: pointer; cursor:hand;
 }
 .right-arrow{
@@ -447,14 +447,14 @@ header .wrapper::before {
   height: 50px;
   display: inline-block;
   float:right;
-  margin-left: 25px;
+  margin-left: 1%;
   cursor: pointer; cursor:hand;
 }
 
 
 /*------------section contact -----------------------*/
 .section-contact{
-  height:100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
   color:#004F89;
@@ -468,13 +468,87 @@ header .wrapper::before {
   width: 100%; 
   height: 100%;  
   background-image:url('images/handshake.jpg'); /* https://c2.staticflickr.com/2/1132/1234618279_c2cfafb29d_b.jpg */
-  opacity:.4;
+  opacity:.3;
   background-color: white;
   background-position:center top;
   background-size:cover;
-  ackground-attachment: fixed;
   z-index: -1;
   background-repeat: no-repeat;
+}
+
+.section-contact h2 {
+  font-size:1.8rem;
+  text-transform:uppercase;
+  padding:40px 0 10px 2%;
+  margin: 0 0 0 50%;
+  letter-spacing:2px;
+  text-align: left;
+  border-bottom:1px solid #004F89;
+  border-left:1px solid #004F89;
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 90%;
+  margin: 6rem auto 20px;
+  order: 1px solid red;
+}
+.contact-subcontainer{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  order: 1px solid green;
+}
+.contact {
+  height:100px;
+  width: 350px;
+  display: inline-block;
+  order: 1px solid purple
+}
+.icon{
+  width: 15%;
+  height: 100%;
+  display: inline-block;
+  float:left;
+  display: flex;
+  align-items: center;
+}
+.icon img{
+  margin: 0 auto;
+  height: 30px;
+}
+.home img{
+  margin-bottom: 15px;
+}
+.contact-info{
+  width: 85%;
+  order: 1px solid green;
+  height: 100%;
+  display: inline-block;
+  float:right;
+  display: flex;
+  align-items: center;
+  overflow-wrap: normal;
+  min-width: 200px;
+  font-size: 1.2rem;
+    text-align: left;
+  font-weight: bold;
+}
+.contact-info p{
+ 
+
+  
+}
+.contact-info a{
+  color: inherit;
+}
+.phone p{
+  letter-spacing: 2px;
 }
 
 footer{
