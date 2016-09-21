@@ -12,7 +12,7 @@ var myResume = [{
 			role: "IT Talent Acquisition Specialist",
 			entity: "Nexonia Inc.",
 			location: "Montreal, QC",
-			details: "I was responsible for the recruitment of technical roles for a fast-growing software development company. I recruited software developers (Java), QA analysts - mobile and integration, system administrator. "
+			details: "I was responsible for the recruitment of technical roles for a fast-growing software development company. I recruited software developers (Java), QA analysts - mobile and integration, and a  system administrator. "
 		},
 		{	key: 11,
 			time: "May 2014 - March 2016",
@@ -56,21 +56,30 @@ var myResume = [{
 			time: "2016",
 			role: "Introduction to Computer Science",
 			entity: "MIT edX",
-			location: "Online [link]"
+			location: "Online [link]",
+			link: '#'
 			},
 			{
 			key: 31,
 			time: "2016",
 			role: "CSS : Core Concepts",
 			entity: "Lynda.com",
-			location: "Online [link]"
+			location: "Online [link]",
+			link:'http://www.lynda.com/ViewCertificate/F6CA9F55CDEF4403A6D12F2D7886AF6B?utm_source=linkedin&utm_medium=sharing&utm_campaign=certificate'
 		},{
 			key: 32,
 			time: "2016",
 			role: "Front-End Development Program",
 			entity: "Free Code Camp",
-			location: "Online [link]"
+			location: "Online [link]",
+			link:'https://www.freecodecamp.com/danamn/front-end-certification'
+		},{	
+			key: 33,
+			time: "2016",
+			role: "Various courses on ReactJS",
+			entity: "Udemy, LearnCode, LevelUp, Lynda.com"
 		}
+
 		]
 	},
 	{

@@ -121,4 +121,12 @@ window.addEventListener("keydown", (function(slideAgain){
   $('.email-address').click(copyToClipboard);
 }
 
+$('.contact').hover(function(){
+  $(this).find('img').css('opacity', 1);
+  console.log('hover');
+}, 
+function(){
+  $(this).find('img').css('opacity', 0.5);
+});
+
 $(document).ready(main)

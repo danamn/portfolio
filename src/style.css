@@ -247,7 +247,12 @@ header .wrapper::before {
   z-index: 1;
   color:#004F89;
  /* background-color: #F3F3F3; */
-  
+}
+.section-resume a{
+  color: #004F89;
+  font-size: 0.9rem;
+  text-decoration: underline;
+
 }
 .section-resume::before {
   content: "";
@@ -259,7 +264,7 @@ header .wrapper::before {
   background-image:url('images/sand.jpg'); /*http://www.publicdomainpictures.net/pictures/90000/velka/silver-gradient.jpg*/
   opacity:.5;
   z-index: -1;
-  background-color: pink;
+  background-color: white;
 }
 .section-resume h2 {
   font-size:1.8rem;
@@ -337,7 +342,7 @@ header .wrapper::before {
   font-weight: bold;
   margin-right: 25px;
   display: inline-block;
-  padding: 5px 0;
+  padding: 5px 0 3px 0;
 
 }
 .resume-info-location{
@@ -350,13 +355,13 @@ header .wrapper::before {
   clear:both;
   background-color: white;
   height: 0px;
-  text-align: justify;
+  text-align: left;
   float: right;
-  margin-right: 20px;
+  margin-right: 30px;
   width: 70%;
   color: black;
   font-size: 0.9rem;
-  line-height: 20px; 
+  line-height: 22px; 
   overflow: hidden;
   padding: 0 10px 0 15px;
   border-right: 1px solid  #004F89;
@@ -510,6 +515,7 @@ header .wrapper::before {
   display: inline-block;
   order: 1px solid purple
 }
+
 .icon{
   width: 15%;
   height: 100%;
@@ -522,9 +528,6 @@ header .wrapper::before {
   margin: 0 auto;
   height: 30px;
   opacity: 0.5;
-}
-.icon img:hover{
-  opacity: 1;
 }
 .home img{
   margin-bottom: 15px;
