@@ -454,7 +454,7 @@ header .wrapper::before {
 
 /*------------section contact -----------------------*/
 .section-contact{
-  min-height: 100vh;
+  min-height: 95vh;
   position: relative;
   z-index: 1;
   color:#004F89;
@@ -521,6 +521,10 @@ header .wrapper::before {
 .icon img{
   margin: 0 auto;
   height: 30px;
+  opacity: 0.5;
+}
+.icon img:hover{
+  opacity: 1;
 }
 .home img{
   margin-bottom: 15px;
@@ -539,19 +543,25 @@ header .wrapper::before {
     text-align: left;
   font-weight: bold;
 }
-.contact-info p{
- 
 
-  
-}
 .contact-info a{
   color: inherit;
+}
+.contact-info a:hover{
+  -webkit-transform: scale(1.05); 
+  transform: scale(1.05);
 }
 .phone p{
   letter-spacing: 2px;
 }
+.comment{
+  font-size: 0.7rem;
+}
 
 footer{
   background-color:#004F89;
+  color: white;
+  font-size: 0.8rem;
+  padding: 10px 0 10px 30px;
   height: 60px;
 }

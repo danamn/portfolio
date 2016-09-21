@@ -67,7 +67,7 @@ var slideForward = function(){
       nextDot.addClass('active-dot');
 };
 
-var slideBackwards = function(){
+function slideBackwards(){
         var currentSlide = $('.current');
         var previousSlide = currentSlide.prev();
 
@@ -103,10 +103,22 @@ window.addEventListener("keydown", (function(slideAgain){
   })(true), false);
   
   // display email address
-  var me = 'dana.nica.dev ';
-  var provider = ' gmail.com';
-  $('.email').find('p').html(me + '@' + provider);
+  var me = 'dana.nica.dev';
+  var provider = 'gmail.com';
+  $('.address').html(me + '@' + provider);
  
+
+  // copy email address by clicking on it
+  function copyToClipboard(){
+    var textToCopy = 'dana.nica.dev@gmail.com';
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(textToCopy).select();
+    document.execCommand("copy");
+    $temp.remove();    
+    console.log('copied');
+  } 
+  $('.email-address').click(copyToClipboard);
 }
 
 $(document).ready(main)
