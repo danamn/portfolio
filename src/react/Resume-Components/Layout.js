@@ -88,12 +88,17 @@ var myResume = [{
 	item: [{
 			key:40,
 			time: 'Front-End',
-			role: "HTML, CSS, JavaScript, jQuery, ReactJS"
+			role: "HTML, CSS, SASS, JavaScript, jQuery, ReactJS"
 		},
 		{	
 			key:41,
 			time: 'Back-End',
 			role: "Basic level of NodeJS, Python, SQL"
+		},
+		{	
+			key:42,
+			time: 'Other',
+			role: "Git, MS Office, SharePoint"
 		}]
 	}]
 
