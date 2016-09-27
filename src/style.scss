@@ -152,6 +152,9 @@ header .wrapper::before {
 .hamburger-menu{
   display: none;
 }
+.hamburger-icon{
+  display: none;
+}
 
 /* -----------------main page ---------------------------*/
 .section {
@@ -388,7 +391,7 @@ header .wrapper::before {
   margin: 100px auto 10px;
 }
 .slider{
-  height: 240px;
+  height: 260px;
   width: 700px;
   position: relative;
   display: inline-block;
@@ -562,7 +565,7 @@ footer{
   }
 }
 
-@media screen and (max-device-width: 740px) {
+@media screen and (max-device-width: 639px), screen and (max-width: 639px) {
   html{
     font-size: 150%;
   }
@@ -593,7 +596,7 @@ footer{
   }
   .resume-unit{
     width: 75%;
-    font-size: 150%;
+    font-size: 130%;
  }
 
 .resume-title{
@@ -633,7 +636,7 @@ footer{
   }
 }
 
-@media screen and (max-device-width: 480px){
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
   nav{
     display: none;
   }
@@ -662,3 +665,25 @@ footer{
     padding: 60px 0;
   }
 }
+@media screen and (min-width: 1445px){
+  body {
+    background-color: #F2E9D7;
+  }
+
+  .wrapper {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.section{
+  padding-bottom: 300px;
+ 
+}
+.header-wrapper {
+  left: 12.5%;
+  
+}
+
+}
+
