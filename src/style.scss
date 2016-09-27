@@ -14,6 +14,7 @@ $main-color: #004F89;
 body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 500;
+  font-size: 100%;
 }
 div {
     display: block;
@@ -26,25 +27,40 @@ div {
     position: relative;
 } 
 
+.section-title{
+  font-size:1.8rem;
+  text-transform:uppercase;
+  padding:30px 0 10px 2%;
+  margin: 0 0 40px 50%;
+  letter-spacing:2px;
+  text-align: left;
+  border-bottom:1px solid $main-color;
+  border-left:1px solid $main-color;
+  font-weight: bold;
+  text-align: left;
+}
+
 /* ----------------- header -------------------*/
 
-header {
+.header-wrapper {
     width: 100%;
+    height: 60px;
     border-bottom: solid 1px rgba(255,255,255,.2);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 3;
-    color:#FFF;
+
 }
 #header-background {
   background-color: $main-color;
   padding:0;
-  height: 100px;
+  height: 60px;
   width: 100%;
   position:absolute;
   top:0px;
   display: none;
+  z-index:-1;
 }
 header .logo {
   position:absolute;
@@ -67,32 +83,27 @@ a {
   color: white;
   cursor: pointer; cursor: hand;
 }
-nav ul {
-  list-style:none;
-}
 .nav-main {
   float:right;
-  padding-right: 8%;
+  height: 100%;
+}
+.nav-main ul{
+  list-style:none;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
 }
 .nav-main li {
-    height: 100%;
-    display:block;
-    float: left;
-    padding-top: 10px;
-    margin-left: 10px;
+display:flex;
 }
 .nav-main a {
     display: inline-block;
     color: #FFF;
-    font-size: 13px;
-    font-size: .8125rem;
-    line-height: 13px;
-    line-height: .8125rem;
+    font-size: 0.95rem;
+    margin: 0 40px 0 0;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 20px 20px;
-
-    position: relative;
     outline: 0;
     transition-duration: .3s;
 }
@@ -138,6 +149,9 @@ header .wrapper::before {
   transform: scale(1.4);
   transition-duration: .3s;
 }
+.hamburger-menu{
+  display: none;
+}
 
 /* -----------------main page ---------------------------*/
 .section {
@@ -168,7 +182,7 @@ header .wrapper::before {
 .section-home h1{
 
   display:inline-block;
-  font-size:5.2rem;
+  font-size:5rem;
   line-height:5.5rem;
   font-weight:800;
   letter-spacing:7px;
@@ -178,7 +192,7 @@ header .wrapper::before {
   font-weight:700;
   letter-spacing:1px;
   padding: 40px 0 20px;
-  line-height: 50px;
+  line-height: 3rem;
 }
 .section-home p {
 
@@ -196,20 +210,9 @@ header .wrapper::before {
   color: #033B80; 
   height: auto;
   background-color: #70B9EC; /*#0067B2 $main-color*/
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
-.section-about h2 {
-  font-size:1.8rem;
-  text-transform:uppercase;
-  padding:40px 0 10px 2%;
-  margin: 0 0 40px 50%;
-  letter-spacing:2px;
-  text-align: left;
-  border-bottom:1px solid $main-color;
-  border-left:1px solid $main-color;
-  font-weight: bold;
-  text-align: left;
-}
+
 .about-text{
   width: 100%;
 }
@@ -249,6 +252,9 @@ header .wrapper::before {
   color:$main-color;
  /* background-color: #F3F3F3; */
 }
+.resume-section-title{
+  margin-bottom:5px;
+}
 .section-resume a{
   color: $main-color;
   font-size: 0.9rem;
@@ -266,12 +272,6 @@ header .wrapper::before {
   opacity:.5;
   z-index: -1;
   background-color: white;
-}
-.section-resume h2 {
-  font-size:1.8rem;
-  text-transform:uppercase;
-  padding:20px 0 10px 2%;
-  margin: 0 0 0 50%;
 }
 
 .resume-title {
@@ -318,7 +318,7 @@ header .wrapper::before {
   display: flex;
   float:left;
   align-self: center;
-  font-size: 0.9rem;
+  font-size: 0.95em;
   padding: 0 10px;
 }
 
@@ -333,13 +333,14 @@ header .wrapper::before {
 }
 .resume-info-role {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1em;
   display: block;
   text-decoration: underline;
-  line-height: 20px;
+  line-height: 1.3rem;
 }
 .resume-info-entity{
   font-weight: bold;
+  font-size: 1em;
   margin-right: 25px;
   display: inline-block;
   padding: 5px 0 3px 0;
@@ -347,8 +348,7 @@ header .wrapper::before {
 }
 .resume-info-location{
   display: inline-block;
-  font-size: 0.9rem;
-
+  font-size: 0.9em;
 }
 
 .resume-item-details{
@@ -371,36 +371,25 @@ header .wrapper::before {
 /* ---------- section projects -----------------*/
 
 .section-projects {
-  min-height:110vh;
-  padding-bottom: 50px;
+  height:auto;
+  padding-bottom: 100px;
   position: relative;
   z-index: 1;
   color:white;
   background-color: #70B9EC;  
 }
 
-.section-projects h2 {
-  font-size:1.8rem;
-  text-transform:uppercase;
-  padding:40px 0 10px 2%;
-  margin: 0 0 0 50%;
-  letter-spacing:2px;
-  text-align: left;
-  border-bottom:1px solid white;
-  border-left:1px solid white;
-  font-weight: bold;
-  text-align: left;
-}
 .slider-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 85%;
+  height: auto;
   margin: 100px auto 10px;
 }
 .slider{
-  height: 250px;
-  width: 650px;
+  height: 240px;
+  width: 700px;
   position: relative;
   display: inline-block;
 }
@@ -421,7 +410,7 @@ header .wrapper::before {
   border-radius: 7px;
   border: 2px solid $main-color;
   margin: 10px;
-  width: 46%;
+  width: 45%;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -459,7 +448,7 @@ header .wrapper::before {
 
 /*------------section contact -----------------------*/
 .section-contact{
-  min-height: 95vh;
+  height: auto;
   position: relative;
   z-index: 1;
   color:$main-color;
@@ -481,26 +470,13 @@ header .wrapper::before {
   background-repeat: no-repeat;
 }
 
-.section-contact h2 {
-  font-size:1.8rem;
-  text-transform:uppercase;
-  padding:40px 0 10px 2%;
-  margin: 0 0 0 50%;
-  letter-spacing:2px;
-  text-align: left;
-  border-bottom:1px solid $main-color;
-  border-left:1px solid $main-color;
-  font-weight: bold;
-  text-align: left;
-}
-
 .contact-container{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   max-width: 90%;
-  margin: 6rem auto 20px;
+  margin: 6rem auto 80px;
 }
 .contact-subcontainer{
   display: flex;
@@ -510,7 +486,7 @@ header .wrapper::before {
 }
 .contact {
   height:100px;
-  width: 350px;
+  width: 400px;
   display: inline-block;
   order: 1px solid purple;
 }
@@ -556,6 +532,9 @@ header .wrapper::before {
 .phone p{
   letter-spacing: 2px;
 }
+.address{
+  curson: hand; cursor: pointer;
+}
 .comment{
   font-size: 0.7rem;
 }
@@ -566,4 +545,120 @@ footer{
   font-size: 0.8rem;
   padding: 10px 0 10px 30px;
   height: 60px;
+}
+
+/*----------------------- media queries ----------------*/
+
+@media (orientation: portrait) {
+
+  .section-projects{
+    padding-bottom: 200px;
+  }
+  .section-contact{
+    padding-bottom: 100px;
+  }
+.contact-container{
+  margin-top: 8rem;
+  }
+}
+
+@media screen and (max-device-width: 740px) {
+  html{
+    font-size: 150%;
+  }
+
+  #header-background, .header-wrapper {
+    height: 100px;
+  }
+   
+  .section-title{
+    padding-top: 60px;
+  }
+  .about-text-half, .about-text-half:first-child{
+    width: 100%;
+    padding: 30px 70px 10px;
+    border-right: none;
+  }
+
+  .about-text p{
+    line-height: 2.5rem;
+    font-size: 1rem;
+  }
+  .about-img{
+    width: 20%;
+  }
+
+  .resume-content{
+    width:100%;
+  }
+  .resume-unit{
+    width: 75%;
+    font-size: 150%;
+ }
+
+.resume-title{
+  margin: 20px 0 25px 5%;
+}
+.resume-item-top{
+  float: none;
+  width: 90%;
+  margin: 0 auto;
+
+}
+.resume-info-role{
+  padding: 10px 0;
+  line-height: 1.3em;
+}
+.resume-item-details{
+  float: none;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  line-height: 1.7em;
+}
+
+  .slider{
+    height: 950px;
+  }
+  .slide-img{
+    width: 80%;
+  }
+
+  .contact-info{
+  font-size: 150%;
+  }
+  .contact{
+  width: 800px;
+  padding: 0px 40% 150px 0;
+  }
+}
+
+@media screen and (max-device-width: 480px){
+  nav{
+    display: none;
+  }
+  .hamburger-icon{
+    display: inline-block;
+    float: right;
+    color:white;
+    font-size: 3.2rem;
+    padding: 0 50px;
+  }
+  .hamburger-menu{
+    background-color: $main-color;
+    display: none;
+    position: fixed;
+    top: 100px;
+    right:0;
+    padding: 0 20px 0 30px;
+    color: white;
+    z-index: 3;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: right;
+  }
+  .hamburger-menu li{
+    list-style:none;
+    padding: 60px 0;
+  }
 }

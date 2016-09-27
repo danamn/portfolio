@@ -111,10 +111,10 @@ export default class Layout extends React.Component {
 	render() {
 
 		return(
-			<div className="wrapper">
-		      <h2 className="resume-title">
+			<div className="resume-wrapper wrapper">
+		      <div className='section-title resume-section-title'>
 		        My Resume
-		      </h2>
+		      </div>
 
 		      <div className='resume-content'>
 		      	{myResume.map( (unit) => {

@@ -17,10 +17,27 @@ var main = function() {
     if ($(this).scrollTop() > 100) {
         $( "#header-background" ).fadeIn();
     } else {
-        console.log('there');
         $( "#header-background" ).fadeOut();
     }
 });
+
+
+  $(".hamburger-icon").click(function(){
+
+      var menu = $(".hamburger-menu");
+      console.log('burger');
+
+      if (!menu.is(":visible")){
+        $( "#header-background" ).fadeIn();
+        menu.slideDown(250);
+      } else {
+        menu.slideUp(250);
+      }
+    }) 
+
+  $(".hamburger-menu").click(function(){
+    $(this).slideUp(250);
+  })
 
 
  
@@ -118,8 +135,12 @@ window.addEventListener("keydown", (function(slideAgain){
     $temp.remove();    
     console.log('copied');
   } 
-  $('.email-address').click(copyToClipboard);
-}
+
+  $('.email-address').click(function(){
+    copyToClipboard();
+    $(this).fadeOut(50).fadeIn(50);
+  });
+  }
 
 $('.contact').hover(function(){
   $(this).find('img').css('opacity', 1);
