@@ -1,0 +1,157 @@
+body {
+  background-image: linear-gradient(white, brown);
+  background-repeat: no-repeat;
+  height:100vh; 
+  font-size: 100%;
+}
+.alert {
+  height: 3rem;
+  margin-top:5%;
+  margin-bottom:0;
+  text-align:center;
+  font-size: 1.6rem;
+  font-family: 'Source Code Pro';
+  color: black;
+}
+.background {
+  position:relative;
+  background-color:black;
+  border-radius:50%;
+  width:25rem;
+  height:25rem;
+  margin:2.7rem auto;  
+  box-shadow: 10px 10px 50px grey;
+}
+.color {
+  position:absolute;
+  width:181px;
+  height: 180px;
+  cursor: pointer; cursor: hand;
+  opacity:0.5;
+  border: 1px solid black;
+}
+.color:focus{
+  outline:0;
+}
+.color-lit {
+  opacity:1;
+}
+#green {
+  top:15px;
+  left: 15px;
+  background-color:green;
+  border-top-left-radius:100%;
+}
+#red {
+  top:15px;
+  left: 205px;
+  background-color:red;
+  border-top-right-radius:100%;
+}
+#blue {
+  top:205px;
+  left: 205px;
+  background-color:blue;
+  border-bottom-right-radius:100%;
+}
+#yellow {
+  top:205px;
+  left: 15px;
+  background-color:yellow;
+  border-bottom-left-radius:100%;
+  cursor: pointer; cursor: hand;
+}
+.center {
+  position:absolute;
+  top:100px;
+  left: 100px;
+  width:200px;
+  height:200px;
+  background-color:black;
+  border-radius:100%;
+  z-index:10;
+}
+.title {
+  color:white;
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+  font-family: 'Limelight', cursive;
+  font-size:2.6em;
+  font-weight:900;
+  pointer-events:none;
+  }
+#reg {
+  font-size:18px;
+  margin:0px;
+  padding:0px;
+}
+
+/*-------------buttons-----------------------*/
+.btn-container{
+  display:flex;
+  order:1px solid red;
+  justify-content:center;
+}
+.btn-div {
+  width:45px;
+  height:auto;
+  text-align:center;
+  margin:0px 20px;
+}
+.btn {
+  background-color: yellow;
+  height:25px;
+  width:25px;
+  border-radius:50%;
+  border:3px solid #4D5780;
+  box-shadow:1px 1px 2px #6E7DB8;
+  cursor: pointer; cursor: hand; 
+}
+#strict-btn {
+  background-color: #600;
+}
+.label {
+  color:white;
+  text-transform:uppercase;
+  font-family: 'BenchNine', sans-serif;
+  margin:3px 0px 0px;
+}
+.level-container{
+  width: 50px;
+  margin:auto;
+  text-align:center;
+}
+#level-display {
+  height:27px;
+  width: 46px;
+  border: 3px solid #800000;
+  border-radius:12%;
+  color:white;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.2em;
+  padding:0px;
+}
+.strict-on {
+  background-color:red !important;
+}
+.btn:focus {
+  outline:none;
+}
+.link{
+  width: 100%;
+  text-align: center;
+}
+.link a{
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Source Code Pro';
+}
+
+@media (orientation: portrait) {
+
+  .alert{
+    margin-top: 20%;
+  }
+
+
+}
