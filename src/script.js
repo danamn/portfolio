@@ -48,7 +48,7 @@ var main = function() {
       if (textToToggle.height() == 0){
         textToToggle.animate(
           {
-            height: textToToggle.get(0).scrollHeight}, 1000, function(){
+            height: textToToggle.get(0).scrollHeight}, 400, function(){
               $(this).height('auto');
           }
         ) 
@@ -56,7 +56,7 @@ var main = function() {
       } else {
          textToToggle.animate(
           {
-            height: 0}, 1000, function(){
+            height: 0}, 400, function(){
               $(this).height(0)
           }
         )

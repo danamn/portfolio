@@ -4,13 +4,18 @@ body {
   height:100vh; 
   font-size: 100%;
 }
+a{
+  font-family: 'Source Code Pro', sans-serif;
+  margin-left: 20px;
+  font-size: 1.3rem;
+}
 .alert {
   height: 3rem;
   margin-top:5%;
   margin-bottom:0;
   text-align:center;
   font-size: 1.6rem;
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', sans-serif;
   color: black;
 }
 .background {
