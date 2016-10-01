@@ -119,6 +119,9 @@ var main = function() {
     }
   })(true), false);
   
+
+  /*****************************contact section *************************************/
+  
   // display email address
   var me = 'dana.nica.dev';
   var provider = 'gmail.com';
@@ -142,6 +145,8 @@ var main = function() {
   });
   }
 
+
+
 $('.contact').hover(function(){
   $(this).find('img').css('opacity', 1);
   console.log('hover');
@@ -149,6 +154,9 @@ $('.contact').hover(function(){
 function(){
   $(this).find('img').css('opacity', 0.5);
 });
+
+
+/************************ Scroll section by section *******************/ 
 
   $(document.body).on('DOMMouseScroll wheel', function (e) {
     var divs = $('.section');
