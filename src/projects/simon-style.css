@@ -149,7 +149,7 @@ a{
 .link a{
   color: white;
   font-size: 1.2rem;
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', sans-serif;
 }
 
 @media (orientation: portrait) {

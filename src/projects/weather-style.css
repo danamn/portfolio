@@ -7,6 +7,12 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
 }
+a{
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  color: white;
+}
 .title {
   font-family: 'Fredoka One', cursive;
   font-size: 1.7em;
@@ -101,3 +107,13 @@ body {
 .btn-F {
   border-radius: 0px 10px 10px 0px;
 } 
+.link{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.link a{
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}

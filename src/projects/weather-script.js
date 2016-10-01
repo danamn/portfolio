@@ -98,6 +98,10 @@ var main = function() {
       $(".btn-C").click(function(){showTempinC(tempC)});  
       
     })
+    .catch(error => {
+      console.log(error);
+      $(".input-city").addClass("input-city-visible").html('We are sorry, there was an error in retrieving the weather data.');
+      });
   }
 
     /* -------- old version of the function -------------
@@ -160,7 +164,7 @@ var main = function() {
   $("#cityWeather").click(function (){
     var city = $("#city").val();
     jsonLink = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=f61715d4a3c0f58a0b97d2c9073aa414";
-    $(".input-city").hide();
+    $(".input-city").removeClass('input-city-visible');
     getWeatherData(jsonLink);
     return false;
   })
