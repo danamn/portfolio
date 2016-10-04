@@ -25,9 +25,13 @@ var main = function() {
           }
         ) 
       } else {
-         textToToggle.animate(
+        $('html,body').animate({
+          scrollTop: $(this).parent().offset().top
+        }, 1000);
+        textToToggle.animate(
           {
-            height: 0}, 1000, function(){
+            height: 0,
+          }, 1000, function(){
               $(this).height(0); 
           }
         )

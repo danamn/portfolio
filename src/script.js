@@ -14,6 +14,7 @@ var main = function() {
 
 
   $(window).scroll(function() {
+    console.log('scroll');
     if ($(this).scrollTop() > 100) {
         $( "#header-background" ).fadeIn();
     } else {
@@ -63,22 +64,29 @@ var main = function() {
       }
     }) 
 
+/* ---------- slider code ------------------*/
+
   var slideForward = function(){
 
     console.log('slideForward');
     var currentSlide = $('.current');
     var nextSlide = currentSlide.next();
+    console.log(currentSlide);
 
     var currentDot = $('.active-dot');
     var nextDot = currentDot.next();
 
     if(nextSlide.length === 0) {
-    nextSlide = $('.slide').first();
-    nextDot = $('.dot').first();
+      nextSlide = $('.slide').first();
+      nextDot = $('.dot').first();
     }
 
-    currentSlide.fadeOut(600).removeClass('current');
-    nextSlide.fadeIn(600).addClass('current');
+    currentSlide.toggle("slide", {direction:'left'}, 800 ).removeClass('current');
+    nextSlide.toggle( "slide", {direction:'right'}, 800 ).addClass('current');
+
+    //currentSlide.fadeOut(600).removeClass('current');
+    //nextSlide.fadeIn(600).addClass('current');
+
 
     currentDot.removeClass('active-dot');
     nextDot.addClass('active-dot');
@@ -96,8 +104,8 @@ var main = function() {
     prevDot = $('.dot').last();
     }
 
-    currentSlide.fadeOut(600).removeClass('current');
-    previousSlide.fadeIn(600).addClass('current');
+    currentSlide.toggle("slide", {direction:'right'}, 800 ).removeClass('current');
+    previousSlide.toggle( "slide", {direction:'left'}, 800 ).addClass('current');
 
     currentDot.removeClass('active-dot');
     prevDot.addClass('active-dot');
@@ -156,8 +164,8 @@ function(){
 });
 
 
-/************************ Scroll section by section *******************/ 
-
+/************************ Scroll down section by section *******************/ 
+/*
   $(document.body).on('DOMMouseScroll wheel', function (e) {
     var divs = $('.section');
     var dir = '';
@@ -185,7 +193,9 @@ function(){
 
     var timeout;
     clearTimeout(timeout);  
-    timeout = setTimeout(function() {          
+    timeout = setTimeout(function() {  
+      
+
       $('html,body').stop().animate({
           scrollTop: divs.eq(div).offset().top
       }, 500);
@@ -194,6 +204,6 @@ function(){
     return false;
   });
 
-
+*/
 
 $(document).ready(main)
