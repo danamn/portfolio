@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pomodoro Clock</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
+	<link type="text/css" href='pomodoro-style.css' rel="stylesheet" />
+</head>
+<body>
+	<div> <a href="../../index.html#projects"> Back </a> </div>
+	<div class= "title"> 
+	  <h1>Pomodoro Timer</h1>
+	  <p> Increase your productivity by concentrating on your work for 25 minutes and then relaxing for 5 minutes.</p>
+	</div>
+
+	<div>
+	  <div id='timer'> 
+	    <div class="motivator"> It's time to <span id='action'>concentrate</span>! </div>
+	    <div id="time"><span id="minutes"></span>:<span id="seconds"></span> </div>
+	    <div class="filling"></div>
+	  </div>
+  
+	  <div class=buttons-container>
+	    <button class = "button" id="restart-button" class="timerOff"> Start timer </button>
+	    <button type="button" class = "button" id="reset-button">Reset timer</button>
+	  </div> 
+  
+	  <div class = "instructions"> Reset timer in order to change the duration of your work or break time.
+	  </div>
+  
+	  <div class="settings-container">
+	      <div class ="set-time">
+	        Work duration: 
+	        <span id="workTime-span"> 
+	          <input id="workTime" type="number" min="0" max="9999" value="25" required> minutes</input> 
+	        </span>
+	      </div>
+	      <div class ="set-time">
+	      	Break duration:
+	        <span id="breakTime-span">
+	          <input id="breakTime" type="number" min="0" max="9999" value="5" required> minutes</input>
+	        </span>
+	      </div>
+	  </div>
+	  <div class='link'> <a href="https://github.com/danamn/My-Portfolio/tree/master/src/projects/pomodoro" target="_blank"> Project Repository on GitHub </a></div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script type="text/javascript" src='pomodoro-script.js'></script>
+
+</body>
+</html>
