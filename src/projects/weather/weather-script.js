@@ -85,7 +85,7 @@ var main = function() {
   function getWeatherData(jsonLink) {
 
     console.log("function link:" + jsonLink);
-    fetch(jsonLink).then(response => response.json()).then( (data) => {
+    fetchJsonp(jsonLink).then(response => response.json()).then( (data) => {
 
       var iconCode = data.weather[0].icon;
       var weatherNow = data.weather[0].main;
