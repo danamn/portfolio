@@ -1,0 +1,132 @@
+
+a{
+ font-family: 'Galindo', cursive;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  color: black;
+  text-decoration: underline;
+}
+.container {
+  max-width: 500px;
+  height:400px;
+  margin-top: 4%;
+	background-color: #C5E0DC;
+	border: 4px solid #382A4D;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px grey;
+}
+.title {
+  margin: 2% auto 2% auto;
+  height: 6%;
+	font-family: 'Galindo', cursive;
+	text-align:center;
+	color:#C8225A;
+}
+.screen {
+  height: 25%;
+  width: 80%;
+  margin: 20px auto;
+  font-family: "Offside", cursive;
+	background-color: white;
+	border: 1px solid #033649;
+	border-radius: 10px;
+}
+.high-screen {
+	height:25%;
+	font-size: 1.3em;
+	color:black;
+	padding: 2px 14px 0 5px;
+}
+.low-screen {
+	height:75%;
+	font-size: 3em;
+	color:black;
+	padding: 10px 14px 0 15px;
+}
+.result{
+	text-align:right;
+}
+.input{
+	text-align:right;
+}
+.buttons-row {
+  height: 60%;
+}
+.numbers-container {
+  height: 100%;
+	font-family: 'Galindo', cursive;
+}
+.number-row {
+  height:25%;
+}
+.number-button {
+	min-height:45px;
+	width: 20%;
+	margin-left: 8%;
+	margin-top: 2%;
+	background-color:black;
+	color:white;
+	font-size: 1.5em;
+	padding-top: 2.5%;
+}
+#zero {
+	width:50%;
+}
+.functions-container {
+  height:100%;
+	font-family: 'Galindo', cursive;
+} 
+.functions-row {
+	height:25%;
+}
+.function-button {
+	min-height:45px;
+	width: 27%;
+	margin-left: 13%;
+	margin-top: 3%;
+	padding-top: 2.5%;
+	background-color:black;
+	color:white;
+	font-size: 1.5em;
+}
+#AC {
+	background-color:white;
+	color:#C8225A;
+}
+#C {
+	background-color:white;
+	color:#C8225A;
+}
+#equal {
+	background-color:#C8225A;
+	width: 70%;
+}
+.link{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.link a{
+  color: black;
+  font-size: 1.4rem;
+  font-family: 'Galindo', cursive;
+}
+@media screen and (max-device-width:460px), screen and (max-width:460px) {
+	.container{
+		margin-top: 20%;
+	}
+	.function-button {
+		font-size: 1.2em;
+		margin-left: 5%;
+		width: 35%;
+	}
+	.number-button {
+		font-size:1.2em;
+	}
+	.low-screen {
+		font-size:2.5em;
+	}
+	#equal {
+		width: 78%;
+	}
+}
