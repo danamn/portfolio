@@ -5,7 +5,7 @@ import ResumeUnit from './ResumeUnit';
 
 var myResume = [{
 	key: 1,
-	unitTitle: "Professional Experience <click for details>",
+	unitTitle: "Professional Experience",
 	item: [{
 			key: 10,
 			time: "May -July 2016",
