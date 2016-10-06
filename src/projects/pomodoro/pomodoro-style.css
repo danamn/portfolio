@@ -118,7 +118,7 @@ p {
 .link a{
   color: white;
   font-size: 1.2rem;
-  font-family: 'Neuton', sans-serif;;
+  font-family: 'Neuton', sans-serif;
 }
 
 @media screen and (max-width:600px), screen and (max-device-width:600px) {
