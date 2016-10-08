@@ -1,0 +1,5 @@
+Notman House is a renowned Start-up incubator in Downtown Montreal. Situated on the ground floor, OSMO Cafe, Notman’s communal space, offers an open door to the startup community. 
+
+The HackTheHouse Hackathon series intends to turn Notman house into a Smart House trough the use of Internet of Things. The Entrance Dashboard of the Osmo Cafe, part of this project, gives the cafe visitors relevant information about the House and its environments. 
+
+In August 2016, taking part at one weekend-long session of the HackTheHouse hackathons, I started the work on a new component for the Osmo Cafe Entrance Dashboard, made with ReactJS. The component displays the hour and relative time to the next two buses around the area, by processing an API of the STM. Beginning of October 2016 the component was approved by the Notman House IT community and was added to the dashboard.
