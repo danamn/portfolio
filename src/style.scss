@@ -209,6 +209,9 @@ display:flex;
 .section-home::after{
   clear:both;
 }
+.dev{
+  font-weight: bold;
+}
 /* ----------- section about --------------------------- */ 
 
 .section-about {
@@ -583,13 +586,15 @@ display:flex;
 
 }
 
-
-
-
-@media screen and (max-device-width: 639px), screen and (max-width: 639px) {
+@media screen and (max-device-width: 639px){
   html{
     font-size: 150%;
   }
+}
+
+
+@media screen and (max-device-width: 639px), screen and (max-width: 639px) {
+  
 
   #header-background, .header-wrapper {
     height: 100px;
@@ -673,12 +678,12 @@ display:flex;
   }
   
 }
-
+/*
 @media screen and (max-device-width: 1100px), screen and (max-width: 1100px){
 .slider{
     height: 250px;
   }
-}
+}*/
 
 @media screen and (min-width: 1439px){
   .wrapper {

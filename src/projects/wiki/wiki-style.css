@@ -3,17 +3,17 @@ body {
   margin: 0;
   background-color:#081E7F;
   font-family: sans-serif;/*'Lora', serif;*/
-  font-size: 1.3em;
+  font-size: 100%;
 }
 .header{
   margin: 0 auto ;
   width: 100%;
+  height: 10em;
   clear:both;
   display: flex;
   overflow-wrap: nowrap;
   justify-content: center;
   align-items: center; 
-
 }
 .wiki-logo{
   width: 100px;
@@ -21,30 +21,31 @@ body {
 }
 .title{
   padding-left: 20px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight:700;
   color: #eee6ff;
   letter-spacing: 2px;
 }
 form{
   color: #eee6ff;
+  font-size: 1.2em;
 }
 input {
   font-family: sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   margin-top:20px;
   border-radius:5px;
 }
 button{
   font-family: sans-serif;;
-  font-size: 1em;
+  font-size: 1.3em;
   margin-top:20px;
   border-radius:5px;
   padding:3px;
 }
 .search-field {
   text-align: center;
-  margin-top:5%;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 #random a{
@@ -55,19 +56,17 @@ button{
   display: inline-block;
   float: left;
   font-family: sans-serif;
-  margin-left: 20px;
-  font-size: 1.3rem;
+  margin: 2% 0 0 2%; 
   color: white;
 }
 .link{
   display: inline-block;
   float: left;
-  margin-left: 20px;
-  margin-bottom: 50px;
+  margin: 2% 0 4% 2%;
 }
 .link a, .back a{
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3em;
   font-family: sans-serif;
 }
 /* -------RESULTS SECTION -----------*/
@@ -91,8 +90,18 @@ button{
   border-radius:8px;
 }
 
-@media (max-width: 400px) {
-  body {
-    font-size: 1em;
+
+
+
+@media screen and (orientation: portrait) and (max-device-width: 600px) {
+ body{
+   font-size: 140%;
+ }
+}
+
+@media screen and (min-width: 1400px){
+  #results{
+    width: 80%;
+    margin: 0 auto;
   }
 }

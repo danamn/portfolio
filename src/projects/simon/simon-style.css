@@ -4,10 +4,13 @@ body {
   min-height:100vh; 
   font-size: 100%;
 }
-a{
+.back{
+  margin-left: 2%;
+  margin-top: 2%;
   font-family: 'Source Code Pro', sans-serif;
-  margin-left: 20px;
-  font-size: 1.3rem;
+}
+a{
+  
 }
 .alert {
   height: 3rem;
@@ -28,8 +31,8 @@ a{
 }
 .color {
   position:absolute;
-  width:181px;
-  height: 180px;
+  width:45%;
+  height: 45%;
   cursor: pointer; cursor: hand;
   opacity:0.5;
   border: 1px solid black;
@@ -41,36 +44,36 @@ a{
   opacity:1;
 }
 #green {
-  top:15px;
-  left: 15px;
+  top:4%;
+  left: 4%;
   background-color:green;
   border-top-left-radius:100%;
 }
 #red {
-  top:15px;
-  left: 205px;
+  top:4%;
+  right: 4%;
   background-color:red;
   border-top-right-radius:100%;
 }
 #blue {
-  top:205px;
-  left: 205px;
+  bottom:4%;
+  right: 4%;
   background-color:blue;
   border-bottom-right-radius:100%;
 }
 #yellow {
-  top:205px;
-  left: 15px;
+  bottom:4%;
+  left: 4%;
   background-color:yellow;
   border-bottom-left-radius:100%;
   cursor: pointer; cursor: hand;
 }
 .center {
   position:absolute;
-  top:100px;
-  left: 100px;
-  width:200px;
-  height:200px;
+  top: 27%;
+  left: 27%;
+  width: 45%;
+  height: 45%;
   background-color:black;
   border-radius:100%;
   z-index:10;
@@ -78,9 +81,9 @@ a{
 .title {
   color:white;
   text-align: center;
-  margin: 30px 0px 0px 0px;
+  margin: 15% 0px 0px 0px;
   font-family: 'Limelight', cursive;
-  font-size:2.6em;
+  font-size:2.3em;
   font-weight:900;
   pointer-events:none;
   }
@@ -121,19 +124,20 @@ a{
   margin:3px 0px 0px;
 }
 .level-container{
-  width: 50px;
+  width: 50%;
   margin:auto;
   text-align:center;
 }
 #level-display {
-  height:27px;
-  width: 46px;
+  height: 10%;
+  width: 50%;
   border: 3px solid #800000;
   border-radius:12%;
   color:white;
   font-family: 'Audiowide', cursive;
   font-size: 1.2em;
   padding:0px;
+  margin: 5px auto;
 }
 .strict-on {
   background-color:red !important;
@@ -151,18 +155,41 @@ a{
   font-family: 'Source Code Pro', sans-serif;
 }
 
-@media screen and (orientation: portrait) and (max-device-width:400px){
-
+@media screen and (orientation: portrait) and (max-device-width:440px){
+  body{
+    font-size: 130%;
+  }
+  .back{
+    font-size: 2em;
+  }
   .alert{
     margin-top: 40%;
   }
+  .background{
+     width:35rem;
+     height: 35rem;
+  }
 
+}
 
+@media screen and (max-width:440px){
+  body{
+    font-size: 70%;
+  }
+
+  .background{
+     width:18rem;
+     height: 18rem;
+  }
 }
 
 @media screen and (min-width: 2000px) {
 .alert{
     margin-top: 10%;
+  }
+  .background{
+     width:32rem;
+     height: 32rem;
   }
 
 }

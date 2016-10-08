@@ -289,7 +289,7 @@ var main = function() {
   /* Dialogs and popups *****
   **************************************/
   $("#popup").dialog({
-       autoOpen: false,
+    autoOpen: false,
     dialogClass:"no-close",
     draggable: true,
     modal:true,

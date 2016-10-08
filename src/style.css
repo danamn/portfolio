@@ -203,6 +203,9 @@ a {
 .section-home::after {
   clear: both; }
 
+.dev {
+  font-weight: bold; }
+
 /* ----------- section about --------------------------- */
 .section-about {
   color: #033B80;
@@ -618,10 +621,10 @@ a {
 
   .contact-container {
     margin-top: 8rem; } }
-@media screen and (max-device-width: 639px), screen and (max-width: 639px) {
+@media screen and (max-device-width: 639px) {
   html {
-    font-size: 150%; }
-
+    font-size: 150%; } }
+@media screen and (max-device-width: 639px), screen and (max-width: 639px) {
   #header-background, .header-wrapper {
     height: 100px; }
 
@@ -693,9 +696,12 @@ a {
     color: white;
     font-size: 3.2rem;
     padding: 0 50px; } }
-@media screen and (max-device-width: 1100px), screen and (max-width: 1100px) {
-  .slider {
-    height: 250px; } }
+/*
+@media screen and (max-device-width: 1100px), screen and (max-width: 1100px){
+.slider{
+    height: 250px;
+  }
+}*/
 @media screen and (min-width: 1439px) {
   .wrapper {
     width: 70%; }

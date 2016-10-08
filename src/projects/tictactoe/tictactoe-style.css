@@ -7,24 +7,21 @@ body {
   background-color: #4d0018;
   font-family: 'Orbitron', sans-serif;
 }
+.back{
+  margin-left: 2%;
+  margin-top: 1%;
+}
 a{
   font-family: 'Orbitron', sans-serif;
-  margin-left: 30px;
-  font-size: 1.3rem;
+  font-size: 1.5em;
   color: white;
 }
 h1 {
   color:white;
   font-weight: 900;
   text-align:center;
-  margin-top:60px;
+  margin-top:2em;
   font-size:2.4em;
-}
-h3{
-  color:white;
-  letter-spacing:2px;
-  text-align:center;
-  font-size:1.2em;
 }
 .game-container {
   margin:30px auto 20px;
@@ -54,19 +51,11 @@ h3{
   background-color:white;
   color:black;
 }
-.test {
-  background-color:white;
-  color:black;
-  font-size:16px;
-}
-.gameStatus{
-  color:white;
-  margin: 10px;
-  font-family: 'Kelly Slab', cursive;
-  font-size:1.5em;
-}
-.ui-dialog .ui-widget {
+.ui-dialog, .ui-widget {
   z-index:100;
+}
+.ui-dialog-content, .ui-widget-content {
+  font-size: 1.8rem;
 }
 .ui-dialog-titlebar-close {
   display:none;
@@ -78,7 +67,7 @@ h3{
 }
 .link a{
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: 'Verdana', sans-serif;
 }
 
@@ -107,4 +96,22 @@ h3{
     padding: 1em;
   }
   
+}
+
+@media screen and (max-device-width: 440px) and (orientation: portrait){
+   .game-container{
+    width: 455px;
+    border: 1px dotted blue
+  }
+  .cell{
+    width: 150px;
+    height: 150px;
+    padding: 10px 20px;
+    padding: 43px 55px;
+    font-size: 50px;
+  }
+
+  .resetButton{
+    font-size: 2em;
+  }
 }
