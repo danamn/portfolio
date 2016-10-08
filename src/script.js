@@ -1,4 +1,5 @@
 var main = function() {
+
   $(".nav-main").find("a").hover( 
     function() {
     $(this).addClass("hover");
@@ -24,21 +25,20 @@ var main = function() {
 
 
   $(".hamburger-icon").click(function(){
-
       var menu = $(".hamburger-menu");
-      console.log('burger');
 
       if (!menu.is(":visible")){
+        console.log('burger');
         $( "#header-background" ).fadeIn();
         menu.slideDown(250);
       } else {
         menu.slideUp(250);
       }
-    }) 
+    }) ;
 
   $(".hamburger-menu").click(function(){
     $(this).slideUp(250);
-  })
+  });
 
 
  
@@ -66,12 +66,11 @@ var main = function() {
 
 /* ---------- slider code ------------------*/
 
-  var slideForward = function(){
+  function slideForward(){
 
-    console.log('slideForward');
     var currentSlide = $('.current');
     var nextSlide = currentSlide.next();
-    console.log(currentSlide);
+    console.log(currentSlide.html());
 
     var currentDot = $('.active-dot');
     var nextDot = currentDot.next();
@@ -81,11 +80,20 @@ var main = function() {
       nextDot = $('.dot').first();
     }
 
-    currentSlide.toggle("slide", {direction:'left'}, 800 ).removeClass('current');
+    $('.arrow').css('pointer-events','none');
+    
+    currentSlide.toggle("slide", {direction:'left'}, 800, function(){
+      currentSlide.removeClass('current');
+      $('.arrow').css('pointer-events','auto');
+    });
+    //.removeClass('current');
+    
     nextSlide.toggle( "slide", {direction:'right'}, 800 ).addClass('current');
 
-    //currentSlide.fadeOut(600).removeClass('current');
-    //nextSlide.fadeIn(600).addClass('current');
+   
+
+  //  $('.current').fadeOut(600).removeClass('current');
+  //  nextSlide.fadeIn(600).addClass('current');
 
 
     currentDot.removeClass('active-dot');
@@ -103,8 +111,13 @@ var main = function() {
     previousSlide = $('.slide').last();
     prevDot = $('.dot').last();
     }
+    
+    $('.arrow').css('pointer-events','none');
 
-    currentSlide.toggle("slide", {direction:'right'}, 800 ).removeClass('current');
+    currentSlide.toggle("slide", {direction:'right'}, 800, function(){
+      currentSlide.removeClass('current');
+      $('.arrow').css('pointer-events','auto');
+    });
     previousSlide.toggle( "slide", {direction:'left'}, 800 ).addClass('current');
 
     currentDot.removeClass('active-dot');
@@ -127,6 +140,24 @@ var main = function() {
     }
   })(true), false);
   
+
+
+  var label = $('.slide').find('p');
+  label.hover(function(){
+    $(this).parent().find('.slide-img').css('filter', 'brightness(0.9)');
+  }, 
+    function(){
+      $(this).parent().find('.slide-img').hover(
+        function(){
+          $(this).parent().find('.slide-img').css('filter', 'brightness(0.9)')
+        }, 
+        function(){
+          $(this).parent().find('.slide-img').css('filter', 'brightness(0.5)');
+        })
+      
+    });
+
+
 
   /*****************************contact section *************************************/
   
@@ -151,18 +182,16 @@ var main = function() {
     copyToClipboard();
     $(this).fadeOut(50).fadeIn(50);
   });
-  }
-
 
 
 $('.contact').hover(function(){
   $(this).find('img').css('opacity', 1);
-  console.log('hover');
 }, 
 function(){
   $(this).find('img').css('opacity', 0.5);
 });
 
+}
 
 /************************ Scroll down section by section *******************/ 
 /*
