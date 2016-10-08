@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(white, brown);
   background-repeat: no-repeat;
-  height:100vh; 
+  min-height:100vh; 
   font-size: 100%;
 }
 a{
@@ -11,7 +11,6 @@ a{
 }
 .alert {
   height: 3rem;
-  margin-top:5%;
   margin-bottom:0;
   text-align:center;
   font-size: 1.6rem;
@@ -24,7 +23,7 @@ a{
   border-radius:50%;
   width:25rem;
   height:25rem;
-  margin:2.7rem auto;  
+  margin:1.2rem auto;  
   box-shadow: 10px 10px 50px grey;
 }
 .color {
@@ -152,11 +151,18 @@ a{
   font-family: 'Source Code Pro', sans-serif;
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-device-width:400px){
 
   .alert{
-    margin-top: 20%;
+    margin-top: 40%;
   }
 
+
+}
+
+@media screen and (min-width: 2000px) {
+.alert{
+    margin-top: 10%;
+  }
 
 }

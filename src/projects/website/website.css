@@ -168,19 +168,20 @@ header .wrapper::before {
 
 .section-about {
   color:#00666F;
-  height:130vh;
+  height:auto;
   display: inline-block;
 }
 .section-about h2 {
-  margin-top: 30px;
-  padding: 20px 0  50px 0;
+  margin: 30px auto;
+  padding: 50px;
+  text-align: center;
   font-size:2.2rem;
 }
 .about-text-container {
   text-align: justify;
   line-height:2.3rem;
   padding: 0 8% 0 8%;
-  margin: 0; 
+  margin: 0 0 60px; 
   position: relative;
 }
 .about-text{
@@ -198,8 +199,7 @@ header .wrapper::before {
 }
 #about-img {
   float: right;
-  max-width: 30%;
-  margin: 20px;
+  margin: 5px 30px;
 }
 
 /* ----------- section  services ----------------------------*/
@@ -229,9 +229,7 @@ header .wrapper::before {
   font-size:2.2rem;
   float:right;
   text-align: right;
-  padding:40px 40% 20px 50px;
-  border-bottom:1px solid white;
-  border-left:1px solid white;
+  padding:40px 50% 20px;
 }
 .services-list {
   clear:both;
@@ -324,4 +322,13 @@ header .wrapper::before {
 }
 .service-info-toggled span{
   font-weight: bold;
+}
+
+@media screen and (min-width: 1445px){
+  .section{
+    padding: 0 10%;
+  }
+  .section-about{
+    padding: 5% 10%;
+  }
 }

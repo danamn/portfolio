@@ -48,12 +48,15 @@ var main = function() {
 				input=result.slice(0,-1);
 			}
 			else {
-				input = eval(result+input);
+				input = eval(result+input);	
 			};
-
-			if (input.toString().length > 11) {
-				input = input.toString().slice(0,9);
+			if (input){
+				if (input.toString().length > 11) {
+					input = input.toString().slice(0,9);
+				}
 			}
+			
+			
 			result="";
 			restart = true;
 		}	
@@ -92,9 +95,8 @@ var main = function() {
 		Calculator();
 	}
 	
-	
 	window.addEventListener("keypress", PressAKey, false);
-	
+
 // Clicking the buttons on screen
 	
 	$("button").click(function() {
