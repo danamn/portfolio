@@ -57,7 +57,7 @@ var myResume = [{
 			role: "Introduction to Computer Science",
 			entity: "MIT edX",
 			location: "Online [link]",
-			link: '#'
+			link: 'https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2016/info'
 			},
 			{
 			key: 31,
@@ -78,6 +78,12 @@ var myResume = [{
 			time: "2016",
 			role: "Various courses on ReactJS",
 			entity: "Udemy, LearnCode, LevelUp, Lynda.com"
+		},
+		{	
+			key: 34,
+			time: "2015-2016",
+			role: "Various courses on front end programming",
+			entity: "Codecademy, Lynda, Udacity"
 		}
 
 		]
@@ -88,7 +94,7 @@ var myResume = [{
 	item: [{
 			key:40,
 			time: 'Front-End',
-			role: "HTML, CSS, SASS, JavaScript, jQuery, ReactJS"
+			role: "HTML, CSS, SASS, Bootstrap, JavaScript, jQuery, ReactJS"
 		},
 		{	
 			key:41,
