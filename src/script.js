@@ -65,6 +65,7 @@ var main = function() {
     }) 
 
 /* ---------- slider code ------------------*/
+ 
 
   function slideForward(){
 
@@ -123,6 +124,21 @@ var main = function() {
     currentDot.removeClass('active-dot');
     prevDot.addClass('active-dot');
   }
+
+function calculateSlideHeight(){
+  var divHeight = $('.slide-img').height();
+  console.log(divHeight);
+  if ($(window).width()> 622){
+    $(".slider").height(divHeight+50);
+    console.log($(".slider").height() + " " + $(window).width());
+  } else {
+    $(".slider").height(2*divHeight+80);
+    console.log($(".slider").height() + " " + $(window).width());
+  }
+}
+  
+calculateSlideHeight();
+$( window ).resize(calculateSlideHeight);
 
   $('.slider-forward').click(slideForward);   
   $('.slider-backward').click(slideBackwards);

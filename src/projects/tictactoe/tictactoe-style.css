@@ -3,9 +3,11 @@
   background-repeat: no-repeat;
   margin: 0;
   padding: 0; }
+
 body {
   background-color: #4d0018;
   font-family: 'Orbitron', sans-serif;
+  font-size: 100%;
 }
 .back{
   margin-left: 2%;
@@ -21,10 +23,10 @@ h1 {
   font-weight: 900;
   text-align:center;
   margin-top:2em;
-  font-size:2.4em;
+  font-size:2.3rem;
 }
 .game-container {
-  margin:30px auto 20px;
+  margin: 3% auto 20px;
   width:305px;
   display:flex;
   flex-wrap:wrap;
@@ -55,25 +57,56 @@ h1 {
   z-index:100;
 }
 .ui-dialog-content, .ui-widget-content {
-  font-size: 1.8rem;
+  font-size: 1.1em;
 }
 .ui-dialog-titlebar-close {
   display:none;
 }
 .link{
-  margin-top: 30px;
+  margin-top: 3%;
   width: 100%;
   text-align: center;
 }
 .link a{
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: 'Verdana', sans-serif;
 }
 
-@media screen and (max-width: 350px) {
+
+@media screen and (max-width: 380px) {
   body{
     font-size:90%;
+  }
+  h1{
+    font-size: 1.8em;
+  }
+  .game-container{
+    width: 214px;
+    border: 1px dotted blue
+  }
+  .cell{
+    width: 70px;
+    height: 70px;
+    padding: 10px 20px;
+  }
+}
+@media (orientation: portrait) {
+  h1{
+    margin-top: 15%;
+  }
+  .ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em;
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 740px) and (orientation: landscape){
+  body{
+    font-size:70%;
+  }
+  h1{
+    margin-top: 1%;
+    font-size: 2em;
   }
   .game-container{
     width: 214px;
@@ -86,32 +119,3 @@ h1 {
   }
 }
 
-@media (orientation: portrait) {
-
-  h1{
-    margin-top: 20%;
-  }
-  .ui-dialog .ui-dialog-buttonpane button {
-    margin: .5em .4em;
-    padding: 1em;
-  }
-  
-}
-
-@media screen and (max-device-width: 440px) and (orientation: portrait){
-   .game-container{
-    width: 455px;
-    border: 1px dotted blue
-  }
-  .cell{
-    width: 150px;
-    height: 150px;
-    padding: 10px 20px;
-    padding: 43px 55px;
-    font-size: 50px;
-  }
-
-  .resetButton{
-    font-size: 2em;
-  }
-}

@@ -1,6 +1,7 @@
 body {
   background-color:#ccd9ff; 
   margin: 0;
+  font-size: 100%;
 }
 .container{
   height: 100vh;

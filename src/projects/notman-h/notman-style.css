@@ -30,7 +30,6 @@ body{
 }
 h3{
 	font-size: 1.5em;
-	display: inline-block;
 	margin: 15px 0;
 	text-align: center;
 }
@@ -54,14 +53,28 @@ p{
 	text-align: justify;
 	margin-top: 20px;
 }
-
 a{
   font-family: 'Work Sans', sans-serif;
 }
 
-@media screen and (max-width: 639px), screen and (max-device-width: 639px){
+
+@media screen and (max-width: 770px){
 	body{
-		font-size: 150%;
+		font-size: 80%;
+	}
+}
+@media screen and (max-width: 480px){
+	.img{
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		float: none;
+	}
+	.text{
+		display: block;
+		width: 80%;
+		margin: 10px auto;
+		float: none;
 	}
 }
 @media screen and (min-width: 1440px){

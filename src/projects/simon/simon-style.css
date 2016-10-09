@@ -13,7 +13,7 @@ a{
   
 }
 .alert {
-  height: 3rem;
+  height: 2em;
   margin-bottom:0;
   text-align:center;
   font-size: 1.6rem;
@@ -44,26 +44,26 @@ a{
   opacity:1;
 }
 #green {
-  top:4%;
-  left: 4%;
+  top:3%;
+  left: 3%;
   background-color:green;
   border-top-left-radius:100%;
 }
 #red {
-  top:4%;
-  right: 4%;
+  top:3%;
+  right: 3%;
   background-color:red;
   border-top-right-radius:100%;
 }
 #blue {
-  bottom:4%;
-  right: 4%;
+  bottom:3%;
+  right: 3%;
   background-color:blue;
   border-bottom-right-radius:100%;
 }
 #yellow {
-  bottom:4%;
-  left: 4%;
+  bottom:3%;
+  left: 3%;
   background-color:yellow;
   border-bottom-left-radius:100%;
   cursor: pointer; cursor: hand;
@@ -155,33 +155,30 @@ a{
   font-family: 'Source Code Pro', sans-serif;
 }
 
-@media screen and (orientation: portrait) and (max-device-width:440px){
+@media screen and (orientation: landscape) and (max-width:640px){
   body{
-    font-size: 130%;
+      font-size: 60%;
+    }
+}
+
+
+@media screen and (orientation: portrait) and (max-width:440px){
+  body{
+    font-size: 60%;
   }
   .back{
     font-size: 2em;
   }
   .alert{
-    margin-top: 40%;
+    margin-top: 20%;
   }
-  .background{
-     width:35rem;
-     height: 35rem;
-  }
-
-}
-
-@media screen and (max-width:440px){
-  body{
-    font-size: 70%;
-  }
-
   .background{
      width:18rem;
      height: 18rem;
   }
+
 }
+
 
 @media screen and (min-width: 2000px) {
 .alert{

@@ -2,6 +2,7 @@ body {
   font-family: 'Neuton', serif;
   background-color:#459393;
   color:black;
+  font-size: 100%;
 }
 a{
   font-family: 'Neuton', sans-serif;
@@ -28,10 +29,10 @@ p {
   position:relative;
   border: 3px solid #8F0D0D;
   width: 50%;
+  max-width: 700px;
   margin: 1% auto 2%;
   padding: 15px 0px 10px;
   font-size: 2em;
-  line-height:1em;
   text-align: center;
   border-radius: 3px;
 }
@@ -50,7 +51,8 @@ p {
 }
 .buttons-container {
   margin: 0px auto;
-  width: 40%;
+  width: 45%;
+  max-width: 600px;
   height: 50px;
 }
 .button {
@@ -63,7 +65,7 @@ p {
   border-radius: 7px;
   cursor: pointer; cursor: hand; 
   text-align:center;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color:black;
   font-family: 'Neuton', serif;
   box-shadow: 2px 2px 3px #085656;
@@ -89,7 +91,8 @@ p {
 .settings-container {
   border: 1px solid black;
   margin: 20px auto 0px auto;
-  width:40%;
+  width: 50%;
+  max-width: 700px;
   border-radius: 5px;
   background-color: #76B8B8;
 }
@@ -119,43 +122,35 @@ p {
   font-family: 'Neuton', sans-serif;
 }
 
-@media screen and (max-width:600px), screen and (max-device-width:600px) {
+
+@media screen and (max-width:640px) {
+  body{
+    font-size: 80%;
+  }
   #timer {
     font-size:1.6em;
-    line-height:30px;
     padding: 10px 0px 10px;
   }  
-  .button {
-    font-size:1em;
-  }
   #workTime-span, #breakTime-span {
     font-size: 1em;
   }
-}
-
-@media screen and (max-device-width:450px) and (orientation:portrait) {
- 
-  h6{
-    margin: 5%;
-  }
-  #timer {
-    font-size:2em;
-    line-height:20px;
-    margin: 5% auto;
-  }
   .buttons-container{
     margin: 5% auto;
+    width: 60%;
   }
-  .button {
-    font-size:1.8em;
-    margin: 10px auto;;
-  }
-
   .settings-container {
     margin:5% auto;
     width:70%;
   }
-  .set-time {
-    font-size: 2em;
+}
+@media screen and (max-width:440px) and (orientation:portrait) {
+ 
+  body{
+    font-size: 60%;
   }
+
+  h6{
+    margin: 5%;
+  }
+ 
 }
