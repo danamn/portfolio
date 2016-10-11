@@ -1,77 +1,64 @@
 var main = function() {
 
-  $(".nav-main").find("a").hover( 
-    function() {
-    $(this).addClass("hover");
-  }, function() {
-    $(this).removeClass("hover");
-  })
- 
+/* --- menu scrolls to page section --- */
+
   $(".scroll").click(function(event){     
-      event.preventDefault();
-   $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-    });
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  });
 
-
+/* ----- make menu invisible at top of page and visible lower on the page  -----*/
 
   $(window).scroll(function() {
-    console.log('scroll');
     if ($(this).scrollTop() > 100) {
-        $( "#header-background" ).fadeIn();
+      $( "#header-background" ).fadeIn();
     } else {
-        $( "#header-background" ).fadeOut();
+      $( "#header-background" ).fadeOut();
     }
   });
 
-
+/* ---------function for hamburger menu on small screens ----- */
   $(".hamburger-icon").click(function(){
-      var menu = $(".hamburger-menu");
-
-      if (!menu.is(":visible")){
-        console.log('burger');
-        $( "#header-background" ).fadeIn();
-        menu.slideDown(250);
-      } else {
-        menu.slideUp(250);
-      }
-    }) ;
+    var menu = $(".hamburger-menu");
+    if (!menu.is(":visible")){
+      $( "#header-background" ).fadeIn();
+      menu.slideDown(250);
+    } else {
+      menu.slideUp(250);
+    }
+  }) ;
 
   $(".hamburger-menu").click(function(){
     $(this).slideUp(250);
   });
 
-
+/* ---- toggle details on Professional Experience in Resume section ---- */
  
   $(".resume-item-top").click(function(){
+    var textToToggle = $(this).parent().find(".resume-item-details");
+    if (textToToggle.height() == 0){
+      textToToggle.animate(
+        {
+        height: textToToggle.get(0).scrollHeight}, 400, function(){
+          $(this).height('auto');
+        }
+      )   
+    } else {
+      textToToggle.animate(
+        {
+        height: 0}, 400, function(){
+          $(this).height(0)
+        }
+      )
+    }
+  }) 
 
-      var textToToggle = $(this).parent().find(".resume-item-details");
-
-      if (textToToggle.height() == 0){
-        textToToggle.animate(
-          {
-            height: textToToggle.get(0).scrollHeight}, 400, function(){
-              $(this).height('auto');
-          }
-        ) 
-        
-      } else {
-         textToToggle.animate(
-          {
-            height: 0}, 400, function(){
-              $(this).height(0)
-          }
-        )
-      }
-    }) 
-
-/* ---------- slider code ------------------*/
+/* --------------- Projects section - slider ------------------*/
  
-
   function slideForward(){
 
     var currentSlide = $('.current');
     var nextSlide = currentSlide.next();
-    console.log(currentSlide.html());
 
     var currentDot = $('.active-dot');
     var nextDot = currentDot.next();
@@ -81,21 +68,14 @@ var main = function() {
       nextDot = $('.dot').first();
     }
 
-    $('.arrow').css('pointer-events','none');
+    $('.arrow').css('pointer-events','none'); // disable arrow when slider turns
     
-    currentSlide.toggle("slide", {direction:'left'}, 800, function(){
+    currentSlide.toggle("slide", {direction:'left'}, 600, function(){
       currentSlide.removeClass('current');
-      $('.arrow').css('pointer-events','auto');
+      $('.arrow').css('pointer-events','auto'); //reenable arrow after slider turned
     });
-    //.removeClass('current');
     
-    nextSlide.toggle( "slide", {direction:'right'}, 800 ).addClass('current');
-
-   
-
-  //  $('.current').fadeOut(600).removeClass('current');
-  //  nextSlide.fadeIn(600).addClass('current');
-
+    nextSlide.toggle( "slide", {direction:'right'}, 600 ).addClass('current');
 
     currentDot.removeClass('active-dot');
     nextDot.addClass('active-dot');
@@ -109,55 +89,54 @@ var main = function() {
     var prevDot = currentDot.prev();
 
     if(previousSlide.length === 0) {
-    previousSlide = $('.slide').last();
-    prevDot = $('.dot').last();
+      previousSlide = $('.slide').last();
+      prevDot = $('.dot').last();
     }
     
     $('.arrow').css('pointer-events','none');
 
-    currentSlide.toggle("slide", {direction:'right'}, 800, function(){
+    currentSlide.toggle("slide", {direction:'right'}, 600, function(){
       currentSlide.removeClass('current');
       $('.arrow').css('pointer-events','auto');
     });
-    previousSlide.toggle( "slide", {direction:'left'}, 800 ).addClass('current');
+    previousSlide.toggle( "slide", {direction:'left'}, 600 ).addClass('current');
 
     currentDot.removeClass('active-dot');
     prevDot.addClass('active-dot');
   }
 
-function calculateSlideHeight(){
-  var divHeight = $('.slide-img').height();
-  console.log(divHeight);
-  if ($(window).width()> 622){
-    $(".slider").height(divHeight+50);
-    console.log($(".slider").height() + " " + $(window).width());
-  } else {
-    $(".slider").height(2*divHeight+80);
-    console.log($(".slider").height() + " " + $(window).width());
-  }
-}
-  
-calculateSlideHeight();
-$( window ).resize(calculateSlideHeight);
-
   $('.slider-forward').click(slideForward);   
-  $('.slider-backward').click(slideBackwards);
+  $('.slider-backward').click(slideBackwards);  
 
+  /* --- slider can be controlled with keyboard left and right arrows */
   window.addEventListener("keydown", (function(slideAgain){
     return function(event) {
       if(!slideAgain) {return false;}
       slideAgain = false;
-      setTimeout(function(){slideAgain = true;}, 700);
+      setTimeout(function(){slideAgain = true;}, 700); //disables multiple slides if key is pressed longer
       if(event.which === 39) {
          slideForward();
       } else if (event.which === 37) {
-          slideBackwards();
+        slideBackwards();
       }
     }
   })(true), false);
   
 
+  /* ---- recalculate height of slider div - needs JS because the div inside has position:absolute */
+  function calculateSlideHeight(){
+    var divHeight = $('.slide-img').height();
+    if ($(window).width()> 622){
+      $(".slider").height(divHeight+50);
+    } else {
+      $(".slider").height(2*divHeight+80);
+    }
+  }
 
+  $(document).ready(calculateSlideHeight());
+  $( window ).resize(calculateSlideHeight);
+
+  /* change brightness of slides images on mouse hover over the image labels ---*/
   var label = $('.slide').find('p');
   label.hover(function(){
     $(this).parent().find('.slide-img').css('filter', 'brightness(0.9)');
@@ -173,15 +152,12 @@ $( window ).resize(calculateSlideHeight);
       
     });
 
-
-
-  /*****************************contact section *************************************/
+/*--------------------contact section --------------------------------------*/
   
   // display email address
   var me = 'dana.nica.dev';
   var provider = 'gmail.com';
   $('.address').html(me + '@' + provider);
- 
 
   // copy email address by clicking on it
   function copyToClipboard(){
@@ -199,14 +175,20 @@ $( window ).resize(calculateSlideHeight);
     $(this).fadeOut(50).fadeIn(50);
   });
 
-
-$('.contact').hover(function(){
-  $(this).find('img').css('opacity', 1);
-}, 
-function(){
-  $(this).find('img').css('opacity', 0.5);
-});
-
+  // change opacity of contact icons on hover on small screens
+  if ($(window).width()> 1000){
+    $('.contact').find('img').css('opacity', 0.5);
+    $('.contact').hover(
+      function(){
+       $(this).find('img').css('opacity', 1);
+      }, 
+      function(){
+        $(this).find('img').css('opacity', 0.5);
+      }
+    );
+  } else {
+    $('.contact').find('img').css('opacity', 1);
+  }
 }
 
 /************************ Scroll down section by section *******************/ 

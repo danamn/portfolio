@@ -1,0 +1,32 @@
+body{background-image:-webkit-linear-gradient(white, brown);background-image:linear-gradient(white,brown);background-repeat:no-repeat;min-height:100vh;font-size:100%}
+.back{margin-left:2%;margin-top:2%;font-family:'Source Code Pro',sans-serif}
+.alert{height:2em;margin-bottom:0;text-align:center;font-size:1.6rem;font-family:'Source Code Pro',sans-serif;color:#000}
+.background{position:relative;background-color:#000;border-radius:50%;width:25rem;height:25rem;margin:1.2rem auto;box-shadow:10px 10px 50px grey}
+.color{position:absolute;width:45%;height:45%;cursor:pointer;cursor:hand;opacity:.5;border:1px solid #000}
+.color:focus{outline:0}
+.color-lit{opacity:1}
+#green{top:3%;left:3%;background-color:green;border-top-left-radius:100%}
+#red{top:3%;right:3%;background-color:red;border-top-right-radius:100%}
+#blue{bottom:3%;right:3%;background-color:#00f;border-bottom-right-radius:100%}
+#yellow{bottom:3%;left:3%;background-color:#ff0;border-bottom-left-radius:100%;cursor:pointer;cursor:hand}
+.center{position:absolute;top:27%;left:27%;width:45%;height:45%;background-color:#000;border-radius:100%;z-index:10}
+.title{color:#fff;text-align:center;margin:15% 0 0;font-family:Limelight,cursive;font-size:2.3em;font-weight:900;pointer-events:none}
+#reg{font-size:18px;margin:0;padding:0}
+.btn-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-ordinal-group:2;-webkit-order:1px solid red;-ms-flex-order:1px solid red;order:1px solid red;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.btn-div{width:45px;height:auto;text-align:center;margin:0 20px}
+.btn{background-color:#ff0;height:25px;width:25px;border-radius:50%;border:3px solid #4D5780;box-shadow:1px 1px 2px #6E7DB8;cursor:pointer;cursor:hand}
+#strict-btn{background-color:#600}
+.label{color:#fff;text-transform:uppercase;font-family:BenchNine,sans-serif;margin:3px 0 0}
+.level-container{width:50%;margin:auto;text-align:center}
+#level-display{height:10%;width:50%;border:3px solid maroon;border-radius:12%;color:#fff;font-family:Audiowide,cursive;font-size:1.2em;padding:0;margin:5px auto}
+.strict-on{background-color:red!important}
+.btn:focus{outline:0}
+.link{width:100%;text-align:center}
+.link a{color:#fff;font-size:1.2rem;font-family:'Source Code Pro',sans-serif}
+@media screen and (orientation:landscape) and (max-width:640px){body{font-size:60%}}
+@media screen and (orientation:portrait) and (max-width:440px){body{font-size:60%}
+.back{font-size:2em}
+.alert{margin-top:20%}
+.background{width:18rem;height:18rem}}
+@media screen and (min-width:2000px){.alert{margin-top:10%}
+.background{width:32rem;height:32rem}}

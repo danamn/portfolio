@@ -8,16 +8,16 @@ var myResume = [{
 	unitTitle: "Professional Experience",
 	item: [{
 			key: 10,
-			time: "May -July 2016",
+			time: "May - July 2016",
 			role: "IT Talent Acquisition Specialist",
-			entity: "Nexonia Inc.",
+			entity: "Nexonia Inc. - click for details",
 			location: "Montreal, QC",
 			details: "I was responsible for the recruitment of technical roles for a fast-growing software development company. I recruited software developers (Java), QA analysts - mobile and integration, and a  system administrator. "
 		},
 		{	key: 11,
 			time: "May 2014 - March 2016",
 			role: "IT Recruiter",
-			entity: "Itergy Inc.",
+			entity: "Itergy Inc. - click for details",
 			location: "Montreal, QC",
 			details: "As sole recruiter of a Microsoft infrastructure solutions consulting firm, I was the main responsible for the entire full-cycle recruitment for technical roles of all levels: infrastructure consultants, system administrators, project managers, technicians."
 		},
@@ -25,7 +25,7 @@ var myResume = [{
 			key: 12,
 			time: "August 2013 - April 2014",
 			role: "IT Recruiter",
-			entity: "eVision Inc.",
+			entity: "eVision Inc. - click for details",
 			location: "Montreal, QC",
 			details: "In an expanding staffing and consulting agency, I have rapidly become successful in recruiting for the public sector, for IT roles with very strict requirements: SAP consultants, System Administrators, Testers, Architects."
 		}]
@@ -35,14 +35,14 @@ var myResume = [{
 	unitTitle: "Education",
 	item: [{
 			key: 20,
-			time: "2004-2009",
+			time: "2004 - 2009",
 			role: "Bachelor + Master in Psychology",
 			entity: "University of Trier",
 			location: "Trier, Germany"
 			},
 			{
 			key: 21,
-			time: "2000-2004",
+			time: "2000 - 2004",
 			role: "Bachelor in Business Administration",
 			entity: "Academy of Economic Studies",
 			location: "Bucharest, Romania"
@@ -54,7 +54,7 @@ var myResume = [{
 	item: [{
 			key: 30,
 			time: "2016",
-			role: "Introduction to Computer Science",
+			role: "Introduction to Computer Science and Programming Using Python",
 			entity: "MIT edX",
 			location: "Online [link]",
 			link: 'https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2016/info'
@@ -81,7 +81,7 @@ var myResume = [{
 		},
 		{	
 			key: 34,
-			time: "2015-2016",
+			time: "2015 - 2016",
 			role: "Various courses on front end programming",
 			entity: "Codecademy, Lynda, Udacity"
 		}
@@ -93,12 +93,12 @@ var myResume = [{
 	unitTitle: "IT Skills",
 	item: [{
 			key:40,
-			time: 'Front-End',
+			time: 'Front End',
 			role: "HTML, CSS, SASS, Bootstrap, JavaScript, jQuery, ReactJS"
 		},
 		{	
 			key:41,
-			time: 'Back-End',
+			time: 'Back End',
 			role: "Basic level of NodeJS, Python, SQL"
 		},
 		{	
