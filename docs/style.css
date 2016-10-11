@@ -38,6 +38,8 @@ a { text-decoration: none; color: white; cursor: pointer; cursor: hand; }
 
 .hamburger-menu a { padding: 20% 0; }
 
+.thumbnail { display: none; }
+
 /* -----------------main page ---------------------------*/
 .section { text-align: center; padding: 50px 10px 0px 10px; width: 100%; }
 
