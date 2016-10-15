@@ -62,7 +62,7 @@ var main = function (){
       }
 
     }).catch(error => {
-      $("#results").html("<p class='no-results'>We are sorry, there was an error in retrieving the data.</p>");
+      $("#results").html("<p class='no-results'>Sorry, there was an error in retrieving the data.</p>");
       console.log(error); 
     });
   }
