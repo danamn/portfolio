@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/portfolio/projects/calculationsKids/static/js/runtime~main.ea956543.js"
   },
   {
-    "revision": "fe3dcbb29ca585cc1705",
-    "url": "/portfolio/projects/calculationsKids/static/js/main.fe3dcbb2.chunk.js"
+    "revision": "5c6b0fddd87fb57c21b6",
+    "url": "/portfolio/projects/calculationsKids/static/js/main.5c6b0fdd.chunk.js"
   },
   {
     "revision": "6d38667c0f850e6d87fb",
     "url": "/portfolio/projects/calculationsKids/static/js/1.6d38667c.chunk.js"
   },
   {
-    "revision": "fe3dcbb29ca585cc1705",
-    "url": "/portfolio/projects/calculationsKids/static/css/main.c17d0473.chunk.css"
+    "revision": "5c6b0fddd87fb57c21b6",
+    "url": "/portfolio/projects/calculationsKids/static/css/main.309f2da9.chunk.css"
   },
   {
-    "revision": "fac3382172efdcea6c4d7aa3bb2b1774",
+    "revision": "8fe87bd96c4de018be09472ea1dd26ba",
     "url": "/portfolio/projects/calculationsKids/index.html"
   }
 ];
