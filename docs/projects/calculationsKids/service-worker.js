@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/projects/calculationsKids/precache-manifest.ec13a8e4c148b8978aba85890cecf9a6.js"
+  "/portfolio/projects/calculationsKids/precache-manifest.cbaa58f676766ee35f8899df5835725d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/projects/calculationsKids/index.html", {
+workbox.routing.registerNavigationRoute("/portfolio/projects/calculationsKids/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

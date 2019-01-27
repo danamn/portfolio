@@ -1,15 +1,15 @@
 {
-  "main.css": "/projects/calculationsKids/static/css/main.dd024d06.chunk.css",
-  "main.js": "/projects/calculationsKids/static/js/main.0d3b7834.chunk.js",
-  "main.js.map": "/projects/calculationsKids/static/js/main.0d3b7834.chunk.js.map",
-  "static/js/1.6d38667c.chunk.js": "/projects/calculationsKids/static/js/1.6d38667c.chunk.js",
-  "static/js/1.6d38667c.chunk.js.map": "/projects/calculationsKids/static/js/1.6d38667c.chunk.js.map",
-  "runtime~main.js": "/projects/calculationsKids/static/js/runtime~main.b68647cb.js",
-  "runtime~main.js.map": "/projects/calculationsKids/static/js/runtime~main.b68647cb.js.map",
-  "static/media/logo.svg": "/projects/calculationsKids/static/media/logo.5d5d9eef.svg",
-  "static/media/App.css": "/projects/calculationsKids/static/media/grey-star-hi.1e0fb0c1.png",
-  "static/css/main.dd024d06.chunk.css.map": "/projects/calculationsKids/static/css/main.dd024d06.chunk.css.map",
-  "index.html": "/projects/calculationsKids/index.html",
-  "precache-manifest.ec13a8e4c148b8978aba85890cecf9a6.js": "/projects/calculationsKids/precache-manifest.ec13a8e4c148b8978aba85890cecf9a6.js",
-  "service-worker.js": "/projects/calculationsKids/service-worker.js"
+  "main.css": "/portfolio/projects/calculationsKids/static/css/main.c17d0473.chunk.css",
+  "main.js": "/portfolio/projects/calculationsKids/static/js/main.fe3dcbb2.chunk.js",
+  "main.js.map": "/portfolio/projects/calculationsKids/static/js/main.fe3dcbb2.chunk.js.map",
+  "static/js/1.6d38667c.chunk.js": "/portfolio/projects/calculationsKids/static/js/1.6d38667c.chunk.js",
+  "static/js/1.6d38667c.chunk.js.map": "/portfolio/projects/calculationsKids/static/js/1.6d38667c.chunk.js.map",
+  "runtime~main.js": "/portfolio/projects/calculationsKids/static/js/runtime~main.ea956543.js",
+  "runtime~main.js.map": "/portfolio/projects/calculationsKids/static/js/runtime~main.ea956543.js.map",
+  "static/media/logo.svg": "/portfolio/projects/calculationsKids/static/media/logo.5d5d9eef.svg",
+  "static/media/App.css": "/portfolio/projects/calculationsKids/static/media/green-star-hi.e7d7787e.png",
+  "static/css/main.c17d0473.chunk.css.map": "/portfolio/projects/calculationsKids/static/css/main.c17d0473.chunk.css.map",
+  "index.html": "/portfolio/projects/calculationsKids/index.html",
+  "precache-manifest.cbaa58f676766ee35f8899df5835725d.js": "/portfolio/projects/calculationsKids/precache-manifest.cbaa58f676766ee35f8899df5835725d.js",
+  "service-worker.js": "/portfolio/projects/calculationsKids/service-worker.js"
 }
